@@ -1,6 +1,9 @@
 package manager.dto;
 
 import manager.enums.Gender;
+import manager.enums.Hobbies;
+
+import java.util.List;
 
 public class StudentDTO {
     private String name;
@@ -10,7 +13,7 @@ public class StudentDTO {
     private String mobile;
     private String dateOfBirth;
     private String subject;
-    private String hobbies;
+    private List<Hobbies> hobbies;
     private String pictures;
     private String currentAddress;
     private String state;
@@ -55,5 +58,51 @@ public class StudentDTO {
 
     public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    public List<Hobbies> getHobbies() {
+        return hobbies;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public String getPictures() {
+        return pictures;
+    }
+
+    public String getCurrentAddress() {
+        return currentAddress;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public StudentDTO(String name, String lastName, String email,
+                      Gender gender, String mobile, String dateOfBirth,
+                      String subject, List<Hobbies> hobbies, String pictures,
+                      String currentAddress, String state, String city) {
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.gender = gender;
+        this.mobile = mobile;
+        this.dateOfBirth = dateOfBirth;
+        this.subject = subject;
+        this.hobbies = hobbies;
+        this.pictures = pictures;
+        this.currentAddress = currentAddress;
+        this.state = state;
+        this.city = city;
     }
 }
