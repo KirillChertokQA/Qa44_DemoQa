@@ -47,8 +47,11 @@ public class AutomationPracticeForm extends BasePage{
     @FindBy(id="react-select-4-input")
     WebElement fieldCity;
 
-    @FindBy(xpath = "//button[@text()='Submit']")
+    @FindBy(xpath = "//button[text()='Submit']")
     WebElement btnSubmit;
+
+    @FindBy(id="example-modal-sizes-title-lg")
+    WebElement textThanksForm;
 
 
 
@@ -124,6 +127,10 @@ public class AutomationPracticeForm extends BasePage{
     private void clickGender(Gender gender) {
         WebElement elementGender = driver.findElement(By.xpath(gender.getLocator()));
         elementGender.click();
+    }
+
+    public boolean isTextToBePresent_textThanksFor(){
+        return isTextToBePresent(textThanksForm, "Thanks for submitting the form", 5);
     }
 
 
